@@ -2,7 +2,7 @@
  * These tests have been taken from Rails' ActiveSupport:Inflector tests.
  */
 var assert = require("assert"),
-    inflection = require("inflection");
+    inflection = require("../");  // require('inflection');
 
 var WORDS = [
     ["search"      , "searches"],
@@ -125,6 +125,8 @@ exports.testHumanize = function() {
 	assert.equal(inflection.humanize("employeeSalary"), "employee salary");
 }
 
-if (module === require.main) {
-    require("test").run(exports);
-}    
+
+Object.keys(exports).forEach(function (key) {
+  exports[key]();
+});
+console.log("done");
