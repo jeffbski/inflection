@@ -1,5 +1,7 @@
 {
     "name": "inflection",
+    "version": "0.0.1"
+    "main": "lib/inflection",
     "description": "A port the Rails/ActiveSupport inflector to JavaScript",
     "keywords": ["utility", "inflection"],
     "maintainers": [
@@ -26,5 +28,11 @@
             "lib/**/*",
             "package.json"
         ]
-    }    
+    },
+    "dependencies": {
+        "amdefine": "~0.0.2"
+    },
+    "devDependencies": {
+        "requirejs": "~1.0.7"
+    }
 }
